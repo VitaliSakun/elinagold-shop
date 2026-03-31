@@ -78,7 +78,7 @@ function Accordion({ sections }) {
             <div className="pb-6">
               {s.isPayment ? (
                 <div>
-                  <p className="text-[11px] font-light text-stone-400 leading-6 mb-4">
+                  <p className="text-[11px] font-normal text-stone-400 leading-6 mb-4">
                     Wir akzeptieren alle gängigen Zahlungsmethoden für ein sicheres
                     und bequemes Einkaufserlebnis.
                   </p>
@@ -86,7 +86,7 @@ function Accordion({ sections }) {
                     {PAYMENT_METHODS.map((method) => (
                       <span
                         key={method}
-                        className="border border-stone-200 px-3 py-1.5 text-[8px] tracking-[0.25em] font-light text-stone-400 uppercase"
+                        className="border border-stone-200 px-3 py-1.5 text-[8px] tracking-[0.25em] font-normal text-stone-400 uppercase"
                       >
                         {method}
                       </span>
@@ -100,14 +100,14 @@ function Accordion({ sections }) {
                       <span className="text-[9px] tracking-[0.25em] uppercase text-stone-400 w-24 flex-shrink-0">
                         {row.label}
                       </span>
-                      <span className="text-[11px] font-light text-stone-600 flex-1">
+                      <span className="text-[11px] font-normal text-stone-600 flex-1">
                         {row.value}
                       </span>
                     </div>
                   ))}
                 </div>
               ) : (
-                <p className="text-[11.5px] font-light leading-7 text-stone-500">{s.content}</p>
+                <p className="text-[11.5px] font-normal leading-7 text-stone-500">{s.content}</p>
               )}
             </div>
           </div>
@@ -181,22 +181,22 @@ export default function ProductInfo({ product }) {
       )}
 
       {/* Produktname */}
-      <h1 className="text-[24px] md:text-[30px] font-[300] tracking-[0.2em] uppercase text-stone-900 leading-[1.3] mb-6">
+      <h1 className="text-[24px] md:text-[30px] font-normal tracking-[0.2em] uppercase text-stone-900 leading-[1.3] mb-6">
         {product.title}
       </h1>
 
       {/* Preis */}
       <div className="flex items-baseline gap-4 mb-5">
-        <span className="text-[22px] font-[200] tracking-[0.1em] text-stone-900">
+        <span className="text-[22px] font-normal tracking-[0.1em] text-stone-900">
           {fmt(price)}
         </span>
         {hasDiscount && (
-          <span className="text-[13px] font-light text-stone-400 line-through tracking-wide">
+          <span className="text-[13px] font-normal text-stone-400 line-through tracking-wide">
             {fmt(comparePrice)}
           </span>
         )}
         {hasDiscount && (
-          <span className="text-[8px] tracking-[0.3em] uppercase bg-stone-900 text-white px-2.5 py-1 font-light">
+          <span className="text-[8px] tracking-[0.3em] uppercase bg-stone-900 text-white px-2.5 py-1 font-normal">
             Sale
           </span>
         )}
@@ -223,7 +223,7 @@ export default function ProductInfo({ product }) {
               <p className="text-[8px] tracking-[0.45em] uppercase text-stone-400 mb-3 font-normal">
                 {opt.name}
                 {selectedOptions[opt.name] && (
-                  <span className="ml-3 text-stone-700 font-light tracking-[0.15em]">{selectedOptions[opt.name]}</span>
+                  <span className="ml-3 text-stone-700 font-normal tracking-[0.15em]">{selectedOptions[opt.name]}</span>
                 )}
               </p>
               <div className="flex flex-wrap gap-2">
@@ -269,7 +269,7 @@ export default function ProductInfo({ product }) {
           >
             −
           </button>
-          <span className="w-11 h-11 flex items-center justify-center border-x border-stone-200 text-[12px] font-light text-stone-800">
+          <span className="w-11 h-11 flex items-center justify-center border-x border-stone-200 text-[12px] font-normal text-stone-800">
             {qty}
           </span>
           <button
@@ -339,7 +339,7 @@ export default function ProductInfo({ product }) {
           <Gem size={14} strokeWidth={1} className="text-stone-400" />
           <div>
             <p className="text-[8px] tracking-[0.4em] uppercase text-stone-400 font-normal">Handgefertigt von</p>
-            <p className="text-[10px] tracking-[0.2em] uppercase text-stone-700 font-light mt-0.5">{product.vendor}</p>
+            <p className="text-[10px] tracking-[0.2em] uppercase text-stone-700 font-normal mt-0.5">{product.vendor}</p>
           </div>
         </div>
       )}

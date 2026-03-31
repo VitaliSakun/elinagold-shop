@@ -68,11 +68,11 @@ export default function ProductCard({ product, priority = false }) {
           {product.title}
         </h3>
         <div className="flex items-baseline gap-2">
-          <span className="text-[11px] font-light tracking-[0.05em] text-black">
+          <span className="text-[11px] font-normal tracking-[0.05em] text-black">
             {fmt(price)} €
           </span>
           {hasDiscount && (
-            <span className="text-[9px] font-light text-stone-400 line-through">
+            <span className="text-[9px] font-normal text-stone-400 line-through">
               {fmt(comparePrice)} €
             </span>
           )}

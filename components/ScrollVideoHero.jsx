@@ -85,7 +85,7 @@ export default function ScrollVideoHero() {
 
         {/* Hero-Text — erscheint sanft gegen Ende, dunkle Farben auf weißem BG */}
         <div
-          className="absolute inset-0 flex flex-col items-center justify-center px-6 text-center"
+          className="absolute inset-0 flex flex-col items-center justify-end pb-24 md:justify-center md:pb-0 px-6 text-center"
           style={{
             zIndex: 3,
             opacity: textOpacity,
@@ -95,11 +95,11 @@ export default function ScrollVideoHero() {
           <p className="text-[8px] md:text-[9px] tracking-[0.7em] uppercase mb-4 md:mb-5 text-stone-400">
             Fine Jewelry
           </p>
-          <h1 className="text-4xl md:text-8xl font-light tracking-[0.2em] md:tracking-[0.25em] uppercase mb-2 md:mb-3 text-stone-900">
+          <h1 className="text-4xl md:text-8xl font-normal tracking-[0.2em] md:tracking-[0.25em] uppercase mb-2 md:mb-3 text-stone-900">
             <span style={{ color: "#5c1325" }}>Elina</span>
             {" Gold"}
           </h1>
-          <p className="text-[9px] md:text-[10px] tracking-[0.35em] md:tracking-[0.4em] uppercase mb-10 md:mb-12 text-stone-400 font-light">
+          <p className="text-[9px] md:text-[10px] tracking-[0.35em] md:tracking-[0.4em] uppercase mb-10 md:mb-12 text-stone-400 font-normal">
             Schmuck für besondere Momente
           </p>
           <Link

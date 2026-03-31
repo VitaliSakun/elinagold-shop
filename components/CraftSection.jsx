@@ -98,7 +98,7 @@ export default function CraftSection() {
           <p className="text-[8px] tracking-[0.7em] uppercase text-bordeaux-600 mb-4 font-normal">
             The Art of Fine Jewelry
           </p>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-[200] tracking-[0.25em] uppercase text-stone-900 leading-tight">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-normal tracking-[0.25em] uppercase text-stone-900 leading-tight">
             Zeitlose Eleganz
           </h2>
           <div className="mx-auto mt-6 w-10 h-px bg-bordeaux-700" />
@@ -122,7 +122,7 @@ export default function CraftSection() {
                 <h3 className="font-serif text-[14px] md:text-[17px] font-medium text-stone-900 tracking-wide mb-1.5 md:mb-2.5">
                   {item.title}
                 </h3>
-                <p className="text-[10px] md:text-[11px] font-light leading-6 md:leading-7 text-stone-500 tracking-wide">
+                <p className="text-[10px] md:text-[11px] font-normal leading-6 md:leading-7 text-stone-500 tracking-wide">
                   {item.text}
                 </p>
               </div>
@@ -164,7 +164,7 @@ export default function CraftSection() {
                 <h3 className="font-serif text-[14px] md:text-[17px] font-medium text-stone-900 tracking-wide mb-1.5 md:mb-2.5">
                   {item.title}
                 </h3>
-                <p className="text-[10px] md:text-[11px] font-light leading-6 md:leading-7 text-stone-500 tracking-wide">
+                <p className="text-[10px] md:text-[11px] font-normal leading-6 md:leading-7 text-stone-500 tracking-wide">
                   {item.text}
                 </p>
               </div>

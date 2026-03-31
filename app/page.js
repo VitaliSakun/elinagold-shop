@@ -74,7 +74,7 @@ export default async function Home() {
             <div className="max-w-7xl mx-auto px-4 md:px-12">
 
               <AnimateIn className="text-center mb-8 md:mb-14">
-                <h2 className="text-xl md:text-2xl font-light tracking-[0.35em] uppercase text-white">
+                <h2 className="text-xl md:text-2xl font-normal tracking-[0.35em] uppercase text-white">
                   Kollektionen
                 </h2>
                 <div

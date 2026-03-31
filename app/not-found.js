@@ -4,10 +4,10 @@ export default function NotFound() {
   return (
     <div className="min-h-screen bg-[#f9f8f4] flex flex-col items-center justify-center text-center px-8">
       <p className="text-[9px] tracking-[0.5em] uppercase text-stone-400 mb-6">404</p>
-      <h1 className="text-2xl md:text-3xl font-light tracking-[0.2em] uppercase text-black mb-4">
+      <h1 className="text-2xl md:text-3xl font-normal tracking-[0.2em] uppercase text-black mb-4">
         Seite nicht gefunden
       </h1>
-      <p className="text-[12px] font-light text-stone-500 mb-10 max-w-xs">
+      <p className="text-[12px] font-normal text-stone-500 mb-10 max-w-xs">
         Die gesuchte Seite existiert leider nicht.
       </p>
       <Link

@@ -22,20 +22,20 @@ export default function Newsletter() {
       }} />
 
       <div className="relative max-w-xl mx-auto px-5 md:px-8 text-center">
-        <p className="text-[7px] md:text-[8px] tracking-[0.6em] uppercase text-bordeaux-200 mb-3 md:mb-4 font-light">
+        <p className="text-[7px] md:text-[8px] tracking-[0.6em] uppercase text-bordeaux-200 mb-3 md:mb-4 font-normal">
           Exklusiv für Sie
         </p>
-        <h2 className="text-lg md:text-2xl font-light tracking-[0.3em] uppercase text-white mb-3 md:mb-4">
+        <h2 className="text-lg md:text-2xl font-normal tracking-[0.3em] uppercase text-white mb-3 md:mb-4">
           Newsletter
         </h2>
         <div className="mx-auto w-8 h-px bg-white/30 mb-5 md:mb-6" />
-        <p className="text-[10px] md:text-[12px] font-light text-bordeaux-100/80 leading-6 md:leading-7 tracking-wide mb-8 md:mb-10 max-w-md mx-auto">
+        <p className="text-[10px] md:text-[12px] font-normal text-bordeaux-100/80 leading-6 md:leading-7 tracking-wide mb-8 md:mb-10 max-w-md mx-auto">
           Erhalten Sie frühzeitig Zugang zu neuen Kollektionen, exklusiven Angeboten und Einblicken in die Welt von Elina Gold.
         </p>
 
         {submitted ? (
           <div className="py-4">
-            <p className="text-[9px] md:text-[10px] tracking-[0.4em] uppercase text-white font-light">
+            <p className="text-[9px] md:text-[10px] tracking-[0.4em] uppercase text-white font-normal">
               Vielen Dank für Ihre Anmeldung
             </p>
           </div>

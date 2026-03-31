@@ -57,7 +57,7 @@ export default function CartDrawer() {
         <div className="flex items-center justify-between px-5 md:px-8 py-4 md:py-6 border-b border-stone-100">
           <div className="flex items-center gap-3">
             <ShoppingBag size={18} strokeWidth={1.2} />
-            <span className="text-[11px] tracking-[0.35em] uppercase font-light">
+            <span className="text-[11px] tracking-[0.35em] uppercase font-normal">
               Warenkorb
             </span>
             {totalQty > 0 && (
@@ -100,7 +100,7 @@ export default function CartDrawer() {
                 <p className="text-[11px] tracking-[0.3em] uppercase text-stone-500 mb-2">
                   Ihr Warenkorb ist leer
                 </p>
-                <p className="text-[11px] text-stone-400 font-light">
+                <p className="text-[11px] text-stone-400 font-normal">
                   Entdecken Sie unsere Kollektionen
                 </p>
               </div>
@@ -147,7 +147,7 @@ export default function CartDrawer() {
                       <Link
                         href={`/produkt/${line.merchandise?.product?.handle}`}
                         onClick={() => setCartOpen(false)}
-                        className="text-[11px] tracking-[0.1em] uppercase font-light text-black hover:opacity-60 transition-opacity leading-tight block mb-1"
+                        className="text-[11px] tracking-[0.1em] uppercase font-normal text-black hover:opacity-60 transition-opacity leading-tight block mb-1"
                       >
                         {line.merchandise?.product?.title}
                       </Link>
@@ -158,7 +158,7 @@ export default function CartDrawer() {
                         </p>
                       )}
 
-                      <p className="text-[11px] font-light text-stone-600 mb-3">
+                      <p className="text-[11px] font-normal text-stone-600 mb-3">
                         {fmt(price)} €
                       </p>
 
@@ -175,7 +175,7 @@ export default function CartDrawer() {
                         >
                           <Minus size={10} strokeWidth={1.5} />
                         </button>
-                        <span className="w-8 text-center text-[11px] font-light border-t border-b border-stone-200 h-7 flex items-center justify-center">
+                        <span className="w-8 text-center text-[11px] font-normal border-t border-b border-stone-200 h-7 flex items-center justify-center">
                           {line.quantity}
                         </span>
                         <button
@@ -197,7 +197,7 @@ export default function CartDrawer() {
                       >
                         <X size={14} strokeWidth={1.2} />
                       </button>
-                      <p className="text-[12px] font-light text-black">
+                      <p className="text-[12px] font-normal text-black">
                         {fmt(totalLinePrice)} €
                       </p>
                     </div>
@@ -215,11 +215,11 @@ export default function CartDrawer() {
               <span className="text-[9px] tracking-[0.35em] uppercase text-stone-500">
                 Zwischensumme
               </span>
-              <span className="text-[14px] font-light text-black">
+              <span className="text-[14px] font-normal text-black">
                 {fmt(totalAmount)} €
               </span>
             </div>
-            <p className="text-[9px] text-stone-400 font-light mb-6">
+            <p className="text-[9px] text-stone-400 font-normal mb-6">
               Versandkosten werden an der Kasse berechnet
             </p>
 

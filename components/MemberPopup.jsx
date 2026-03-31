@@ -78,7 +78,7 @@ export default function MemberPopup() {
             <h3 className="text-[10px] md:text-[11px] tracking-[0.5em] uppercase text-white font-normal mb-1.5 md:mb-2">
               Werden Sie Member
             </h3>
-            <p className="text-[8px] md:text-[9px] tracking-[0.25em] uppercase text-white/50 font-light">
+            <p className="text-[8px] md:text-[9px] tracking-[0.25em] uppercase text-white/50 font-normal">
               Exklusiver Zugang · Neue Kollektionen
             </p>
           </div>
@@ -103,7 +103,7 @@ export default function MemberPopup() {
               <p className="text-[10px] md:text-[11px] tracking-[0.35em] uppercase text-stone-800 font-normal mb-1.5 md:mb-2">
                 Willkommen im Club
               </p>
-              <p className="text-[9px] md:text-[10px] font-light text-stone-500 tracking-wide">
+              <p className="text-[9px] md:text-[10px] font-normal text-stone-500 tracking-wide">
                 Sie erhalten als Erste Zugang zu neuen Kollektionen.
               </p>
             </div>
@@ -123,7 +123,7 @@ export default function MemberPopup() {
                     </div>
                     <div>
                       <p className="text-[9px] md:text-[10px] tracking-[0.15em] uppercase text-stone-800 font-normal mb-0.5">{item.title}</p>
-                      <p className="text-[9px] md:text-[10px] font-light text-stone-400 tracking-wide">{item.desc}</p>
+                      <p className="text-[9px] md:text-[10px] font-normal text-stone-400 tracking-wide">{item.desc}</p>
                     </div>
                   </div>
                 ))}

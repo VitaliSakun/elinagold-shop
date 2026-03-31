@@ -82,7 +82,7 @@ export default function ScrollCarousel3D({ products = [] }) {
           <p className="text-[9px] tracking-[0.65em] uppercase text-stone-400 mb-3">
             Frisch eingetroffen
           </p>
-          <h2 className="text-xl md:text-2xl font-light tracking-[0.3em] uppercase text-stone-900">
+          <h2 className="text-xl md:text-2xl font-normal tracking-[0.3em] uppercase text-stone-900">
             Neuheiten
           </h2>
           <div
@@ -141,10 +141,10 @@ export default function ScrollCarousel3D({ products = [] }) {
                       <h3 className="font-serif font-semibold text-stone-900 mb-1.5 leading-snug line-clamp-2 text-[14px]">
                         {node.title}
                       </h3>
-                      <p className="text-[9px] tracking-[0.35em] uppercase font-light text-stone-400 mb-1.5">
+                      <p className="text-[9px] tracking-[0.35em] uppercase font-normal text-stone-400 mb-1.5">
                         {material}
                       </p>
-                      <p className="text-[12px] font-light text-stone-700 tracking-wide">
+                      <p className="text-[12px] font-normal text-stone-700 tracking-wide">
                         {fmt(price)} €
                       </p>
                     </div>

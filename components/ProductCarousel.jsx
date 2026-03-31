@@ -100,11 +100,11 @@ export default function ProductCarousel({ products = [] }) {
                   {node.title}
                 </h3>
                 {/* Material — leichte Sans-Serif mit Letter-Spacing */}
-                <p className="text-[9px] tracking-[0.35em] uppercase font-light text-stone-400 mb-2">
+                <p className="text-[9px] tracking-[0.35em] uppercase font-normal text-stone-400 mb-2">
                   {material}
                 </p>
                 {/* Preis */}
-                <p className="text-[12px] font-light text-stone-700 tracking-wide">
+                <p className="text-[12px] font-normal text-stone-700 tracking-wide">
                   {fmt(price)} €
                 </p>
               </div>

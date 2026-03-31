@@ -47,7 +47,7 @@ export default function Preloader() {
         <div className="h-full bg-white/60 preloader-bar" />
       </div>
 
-      <p className="mt-4 md:mt-6 text-[6px] md:text-[7px] tracking-[0.6em] uppercase text-white/40 font-light preloader-text">
+      <p className="mt-4 md:mt-6 text-[6px] md:text-[7px] tracking-[0.6em] uppercase text-white/40 font-normal preloader-text">
         Fine Jewelry
       </p>
     </div>
