@@ -48,7 +48,7 @@ export default function Navbar({ collections = [], overDark = false, scrolled = 
   }
 
   const navLinks = (collections.length > 0 ? collections : FALLBACK_LINKS)
-    .filter((c) => c.handle !== "anhanger")
+    .filter((c) => c.handle !== "anhanger" && c.handle !== "neuheiten")
     .map((c) => ({
       label: c.title.toUpperCase(),
       href: `/kollektion/${c.handle}`,
