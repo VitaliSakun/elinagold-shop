@@ -2,5 +2,9 @@
   command = "npm run build"
   publish = ".next"
 
+[build.environment]
+  NEXT_PUBLIC_SHOPIFY_DOMAIN = "60ad2b-81.myshopify.com"
+  NEXT_PUBLIC_SHOPIFY_TOKEN = "4e891eae051286c3942cd504ba8dec11"
+
 [[plugins]]
   package = "@netlify/plugin-nextjs"
