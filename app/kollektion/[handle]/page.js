@@ -59,14 +59,14 @@ export default async function CollectionPage({ params }) {
           {/* Kollektion Titel */}
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 md:gap-8">
             <h1
-              className="text-[11vw] sm:text-[10vw] md:text-[7.5vw] font-normal tracking-[0.06em] uppercase text-black leading-none"
+              className="text-[11vw] sm:text-[10vw] md:text-[7.5vw] font-medium tracking-[0.06em] uppercase text-black leading-none"
             >
               {collection.title}
             </h1>
 
             <div className="md:max-w-xs md:pb-2 shrink-0">
               {collection.description && (
-                <p className="text-[10px] md:text-[11px] font-normal leading-6 md:leading-7 text-stone-500 mb-3 md:mb-4">
+                <p className="text-[10px] md:text-[11px] font-medium leading-6 md:leading-7 text-stone-500 mb-3 md:mb-4">
                   {collection.description}
                 </p>
               )}

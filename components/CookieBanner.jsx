@@ -59,7 +59,7 @@ export default function CookieBanner() {
 
       <div className="px-5 py-5 md:px-6 md:py-6">
         {/* Text */}
-        <p className="text-[12px] md:text-[13px] font-normal leading-6 text-stone-600 font-sans mb-4">
+        <p className="text-[12px] md:text-[13px] font-medium leading-6 text-stone-600 font-sans mb-4">
           Wir verwenden Cookies, um Ihr Einkaufserlebnis zu verbessern.
           Weitere Informationen finden Sie in unserer{" "}
           <Link
@@ -75,13 +75,13 @@ export default function CookieBanner() {
         <div className="flex flex-col gap-2.5 sm:flex-row sm:gap-3">
           <button
             onClick={handleAccept}
-            className="flex-1 bg-[#641428] text-white text-[11px] tracking-[0.2em] uppercase font-sans font-normal py-3 px-5 hover:bg-[#4e0f1e] active:opacity-80 transition-colors"
+            className="flex-1 bg-[#641428] text-white text-[11px] tracking-[0.2em] uppercase font-sans font-medium py-3 px-5 hover:bg-[#4e0f1e] active:opacity-80 transition-colors"
           >
             Alle akzeptieren
           </button>
           <button
             onClick={handleDecline}
-            className="flex-1 border border-stone-300 text-stone-700 text-[11px] tracking-[0.2em] uppercase font-sans font-normal py-3 px-5 hover:border-stone-500 hover:text-stone-900 active:opacity-70 transition-colors"
+            className="flex-1 border border-stone-300 text-stone-700 text-[11px] tracking-[0.2em] uppercase font-sans font-medium py-3 px-5 hover:border-stone-500 hover:text-stone-900 active:opacity-70 transition-colors"
           >
             Nur notwendige
           </button>

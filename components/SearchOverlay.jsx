@@ -81,7 +81,7 @@ export default function SearchOverlay({ open, onClose }) {
             value={query}
             onChange={handleChange}
             placeholder="Wonach suchen Sie?"
-            className="flex-1 bg-transparent text-[14px] md:text-[16px] font-normal tracking-[0.05em] text-stone-900 placeholder:text-stone-400 outline-none"
+            className="flex-1 bg-transparent text-[14px] md:text-[16px] font-medium tracking-[0.05em] text-stone-900 placeholder:text-stone-400 outline-none"
           />
           <button
             onClick={onClose}
@@ -105,7 +105,7 @@ export default function SearchOverlay({ open, onClose }) {
               <p className="text-[9px] md:text-[10px] tracking-[0.4em] uppercase text-stone-400 mb-2">
                 Keine Ergebnisse für
               </p>
-              <p className="text-[13px] md:text-[14px] font-normal text-stone-600">&ldquo;{query}&rdquo;</p>
+              <p className="text-[13px] md:text-[14px] font-medium text-stone-600">&ldquo;{query}&rdquo;</p>
             </div>
           )}
 
@@ -125,7 +125,7 @@ export default function SearchOverlay({ open, onClose }) {
                       onClick={onClose}
                       className="group block"
                     >
-                      <div className="relative aspect-4/5 overflow-hidden bg-stone-100 mb-2">
+                      <div className="relative aspect-4/5 overflow-hidden bg-white mb-2">
                         {img ? (
                           <Image
                             src={img.url}
@@ -140,10 +140,10 @@ export default function SearchOverlay({ open, onClose }) {
                           </div>
                         )}
                       </div>
-                      <h4 className="text-[8px] md:text-[9px] tracking-[0.12em] uppercase font-normal text-stone-800 mb-0.5 line-clamp-2 leading-snug">
+                      <h4 className="text-[8px] md:text-[9px] tracking-[0.12em] uppercase font-medium text-stone-800 mb-0.5 line-clamp-2 leading-snug">
                         {product.title}
                       </h4>
-                      <p className="text-[9px] md:text-[10px] font-normal text-stone-600">
+                      <p className="text-[9px] md:text-[10px] font-medium text-stone-600">
                         {fmt(price)} €
                       </p>
                     </Link>

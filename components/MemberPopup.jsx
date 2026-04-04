@@ -75,10 +75,10 @@ export default function MemberPopup() {
               </div>
             </div>
 
-            <h3 className="text-[10px] md:text-[11px] tracking-[0.5em] uppercase text-white font-normal mb-1.5 md:mb-2">
+            <h3 className="text-[10px] md:text-[11px] tracking-[0.5em] uppercase text-white font-medium mb-1.5 md:mb-2">
               Werden Sie Member
             </h3>
-            <p className="text-[8px] md:text-[9px] tracking-[0.25em] uppercase text-white/50 font-normal">
+            <p className="text-[8px] md:text-[9px] tracking-[0.25em] uppercase text-white/50 font-medium">
               Exklusiver Zugang · Neue Kollektionen
             </p>
           </div>
@@ -100,10 +100,10 @@ export default function MemberPopup() {
               <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-bordeaux-50 flex items-center justify-center mx-auto mb-3 md:mb-4">
                 <Crown size={18} strokeWidth={1} className="text-bordeaux-700" />
               </div>
-              <p className="text-[10px] md:text-[11px] tracking-[0.35em] uppercase text-stone-800 font-normal mb-1.5 md:mb-2">
+              <p className="text-[10px] md:text-[11px] tracking-[0.35em] uppercase text-stone-800 font-medium mb-1.5 md:mb-2">
                 Willkommen im Club
               </p>
-              <p className="text-[9px] md:text-[10px] font-normal text-stone-500 tracking-wide">
+              <p className="text-[9px] md:text-[10px] font-medium text-stone-500 tracking-wide">
                 Sie erhalten als Erste Zugang zu neuen Kollektionen.
               </p>
             </div>
@@ -118,12 +118,12 @@ export default function MemberPopup() {
                   <div key={i} className="flex gap-3 md:gap-4 items-start">
                     <div className="flex-shrink-0 mt-0.5">
                       <div className="w-5 h-5 rounded-full border border-bordeaux-200 flex items-center justify-center">
-                        <span className="text-[7px] text-bordeaux-600 font-normal">{i + 1}</span>
+                        <span className="text-[7px] text-bordeaux-600 font-medium">{i + 1}</span>
                       </div>
                     </div>
                     <div>
-                      <p className="text-[9px] md:text-[10px] tracking-[0.15em] uppercase text-stone-800 font-normal mb-0.5">{item.title}</p>
-                      <p className="text-[9px] md:text-[10px] font-normal text-stone-400 tracking-wide">{item.desc}</p>
+                      <p className="text-[9px] md:text-[10px] tracking-[0.15em] uppercase text-stone-800 font-medium mb-0.5">{item.title}</p>
+                      <p className="text-[9px] md:text-[10px] font-medium text-stone-400 tracking-wide">{item.desc}</p>
                     </div>
                   </div>
                 ))}
@@ -142,7 +142,7 @@ export default function MemberPopup() {
                 />
                 <button
                   type="submit"
-                  className="w-full flex items-center justify-center gap-2.5 bg-bordeaux-700 text-white py-3 md:py-3.5 text-[9px] tracking-[0.45em] uppercase font-normal active:bg-bordeaux-800 hover:bg-bordeaux-800 transition-colors duration-300"
+                  className="w-full flex items-center justify-center gap-2.5 bg-bordeaux-700 text-white py-3 md:py-3.5 text-[9px] tracking-[0.45em] uppercase font-medium active:bg-bordeaux-800 hover:bg-bordeaux-800 transition-colors duration-300"
                 >
                   Member werden
                   <ArrowRight size={12} strokeWidth={1.5} />

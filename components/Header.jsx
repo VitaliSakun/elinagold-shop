@@ -15,7 +15,7 @@ export default function Header({ collections }) {
 
   useEffect(() => {
     // Initialzustand setzen
-    setOverDark(isHomepage);
+    setOverDark(false);
     setScrolled(false);
 
     const onScroll = () => {
@@ -27,13 +27,24 @@ export default function Header({ collections }) {
       else if (y < lastY.current) setHidden(false);
       lastY.current = y;
 
-      // Weiß/transparent abhängig ob wir über dem dunklen Video-Hero sind
       setScrolled(y > 20);
-      setOverDark(isHomepage ? y < window.innerHeight - 80 : false);
+
+      // Dynamsich dunkle Bereiche erkennen
+      const topOffset = 40; // Höhe um navbar zu prüfen
+      let isDark = false;
+      const darkElements = document.querySelectorAll('[data-theme="dark"]');
+      darkElements.forEach((el) => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= topOffset && rect.bottom >= topOffset) {
+          isDark = true;
+        }
+      });
+      setOverDark(isDark);
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll();
+    // setTimeout um zu warten bis DOM rendert
+    setTimeout(onScroll, 100);
     return () => window.removeEventListener("scroll", onScroll);
   }, [isHomepage]);
 

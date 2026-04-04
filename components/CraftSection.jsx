@@ -33,9 +33,9 @@ export default function CraftSection() {
       const rect = section.getBoundingClientRect();
       const viewportHeight = window.innerHeight;
 
-      // Divisor erhöht = Video läuft langsamer durch
+      // Divisor verringert = Video läuft 15% schneller durch
       const progress = Math.min(1, Math.max(0,
-        (viewportHeight - rect.top) / (viewportHeight * 2.5)
+        (viewportHeight - rect.top) / (viewportHeight * 2.15)
       ));
 
       if (video.duration) {
@@ -95,10 +95,10 @@ export default function CraftSection() {
 
         {/* Oberer Titel */}
         <div className="text-center mb-10 md:mb-20">
-          <p className="text-[8px] tracking-[0.7em] uppercase text-bordeaux-600 mb-4 font-normal">
+          <p className="text-[8px] tracking-[0.7em] uppercase text-bordeaux-600 mb-4 font-medium">
             The Art of Fine Jewelry
           </p>
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-normal tracking-[0.25em] uppercase text-stone-900 leading-tight">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-medium tracking-[0.25em] uppercase text-stone-900 leading-tight">
             Zeitlose Eleganz
           </h2>
           <div className="mx-auto mt-6 w-10 h-px bg-bordeaux-700" />
@@ -117,12 +117,12 @@ export default function CraftSection() {
               >
                 <div className="inline-flex items-center gap-2 mb-2 md:mb-3 justify-center md:justify-end">
                   <div className="w-6 md:w-8 h-px bg-bordeaux-700/40" />
-                  <span className="text-[7px] tracking-[0.5em] uppercase text-bordeaux-600 font-normal">{item.num}</span>
+                  <span className="text-[7px] tracking-[0.5em] uppercase text-bordeaux-600 font-medium">{item.num}</span>
                 </div>
                 <h3 className="font-serif text-[14px] md:text-[17px] font-medium text-stone-900 tracking-wide mb-1.5 md:mb-2.5">
                   {item.title}
                 </h3>
-                <p className="text-[10px] md:text-[11px] font-normal leading-6 md:leading-7 text-stone-500 tracking-wide">
+                <p className="text-[10px] md:text-[11px] font-medium leading-6 md:leading-7 text-stone-500 tracking-wide">
                   {item.text}
                 </p>
               </div>
@@ -158,13 +158,13 @@ export default function CraftSection() {
                 className="text-center md:text-left"
               >
                 <div className="inline-flex items-center gap-2 mb-2 md:mb-3 justify-center md:justify-start">
-                  <span className="text-[7px] tracking-[0.5em] uppercase text-bordeaux-600 font-normal">{item.num}</span>
+                  <span className="text-[7px] tracking-[0.5em] uppercase text-bordeaux-600 font-medium">{item.num}</span>
                   <div className="w-6 md:w-8 h-px bg-bordeaux-700/40" />
                 </div>
                 <h3 className="font-serif text-[14px] md:text-[17px] font-medium text-stone-900 tracking-wide mb-1.5 md:mb-2.5">
                   {item.title}
                 </h3>
-                <p className="text-[10px] md:text-[11px] font-normal leading-6 md:leading-7 text-stone-500 tracking-wide">
+                <p className="text-[10px] md:text-[11px] font-medium leading-6 md:leading-7 text-stone-500 tracking-wide">
                   {item.text}
                 </p>
               </div>

@@ -8,6 +8,7 @@ import MemberPopup from "@/components/MemberPopup";
 import { CartProvider } from "@/context/CartContext";
 import { getCollections } from "@/lib/shopify";
 import CookieBanner from "@/components/CookieBanner";
+import Footer from "@/components/Footer";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -45,6 +46,7 @@ export default async function RootLayout({ children }) {
           <CartDrawer />
           <MemberPopup />
           {children}
+          <Footer />
           <CookieBanner />
         </CartProvider>
       </body>

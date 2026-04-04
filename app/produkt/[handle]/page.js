@@ -115,7 +115,6 @@ export default async function ProductPage({ params }) {
           </div>
         </section>
       )}
-
     </div>
   );
 }

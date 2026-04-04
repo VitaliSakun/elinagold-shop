@@ -36,7 +36,7 @@ export default async function KollektionenPage() {
 
       {/* Heading */}
       <div className="text-center py-8 md:py-12 px-5 md:px-8">
-        <h1 className="text-2xl md:text-4xl font-normal tracking-[0.3em] uppercase text-black mb-3 md:mb-4">
+        <h1 className="text-2xl md:text-4xl font-medium tracking-[0.3em] uppercase text-black mb-3 md:mb-4">
           Kollektionen
         </h1>
         <p className="text-[10px] md:text-[11px] tracking-[0.3em] uppercase text-stone-400">
@@ -65,7 +65,7 @@ export default async function KollektionenPage() {
             )}
             <div className="absolute inset-0 bg-black/50 transition-all duration-700 active:bg-black/35 group-hover:bg-black/40" />
             <div className="absolute inset-0 flex flex-col items-center justify-end pb-8 md:pb-12 text-white">
-              <h2 className="text-xl md:text-3xl font-normal tracking-[0.25em] md:tracking-[0.3em] uppercase mb-2 md:mb-3">
+              <h2 className="text-2xl md:text-4xl font-bold tracking-[0.25em] md:tracking-[0.3em] uppercase mb-2 md:mb-3">
                 {col.title}
               </h2>
               <span className="text-[8px] md:text-[9px] tracking-[0.4em] uppercase border-b border-white/40 pb-1 opacity-80">

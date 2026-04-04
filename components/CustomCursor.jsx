@@ -82,7 +82,7 @@ export default function CustomCursor() {
     top: 0,
     left: 0,
     pointerEvents: "none",
-    zIndex: 9999,
+    zIndex: 99999,
     borderRadius: "50%",
     opacity: 0,
   };

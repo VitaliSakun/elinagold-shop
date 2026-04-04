@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
 import { getProducts, getCollections } from "@/lib/shopify";
-import Footer from "@/components/Footer";
 import ScrollVideoHero from "@/components/ScrollVideoHero";
 import CraftSection from "@/components/CraftSection";
 import ScrollCarousel3D from "@/components/ScrollCarousel3D";
@@ -70,11 +69,11 @@ export default async function Home() {
             2. KOLLEKTIONEN
         ══════════════════════════════════════════ */}
         {categories.length > 0 && (
-          <section className="py-14 md:py-28" style={{ backgroundColor: "#641428" }}>
+          <section data-theme="dark" className="py-14 md:py-28" style={{ backgroundColor: "#641428" }}>
             <div className="max-w-7xl mx-auto px-4 md:px-12">
 
               <AnimateIn className="text-center mb-8 md:mb-14">
-                <h2 className="text-xl md:text-2xl font-normal tracking-[0.35em] uppercase text-white">
+                <h2 className="text-xl md:text-2xl font-medium tracking-[0.35em] uppercase text-white">
                   Kollektionen
                 </h2>
                 <div
@@ -99,7 +98,7 @@ export default async function Home() {
                         <div className="absolute bottom-0 left-0 right-0 h-0.5 bg-white scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                       </div>
                       <div className="text-center mt-2">
-                        <h3 className="font-serif text-[11px] md:text-[12px] font-medium text-white/80 tracking-wide leading-snug group-hover:text-white transition-colors duration-300">
+                        <h3 className="font-serif text-[13px] md:text-[15px] font-bold text-white/90 tracking-wide leading-snug group-hover:text-white transition-colors duration-300">
                           {cat.label}
                         </h3>
                       </div>
@@ -134,10 +133,7 @@ export default async function Home() {
           <Newsletter />
         </AnimateIn>
 
-        {/* ══════════════════════════════════════════
-            6. FOOTER
-        ══════════════════════════════════════════ */}
-        <Footer />
+
 
       </main>
     </div>

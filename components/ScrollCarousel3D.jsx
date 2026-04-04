@@ -82,7 +82,7 @@ export default function ScrollCarousel3D({ products = [] }) {
           <p className="text-[9px] tracking-[0.65em] uppercase text-stone-400 mb-3">
             Frisch eingetroffen
           </p>
-          <h2 className="text-xl md:text-2xl font-normal tracking-[0.3em] uppercase text-stone-900">
+          <h2 className="text-xl md:text-2xl font-medium tracking-[0.3em] uppercase text-stone-900">
             Neuheiten
           </h2>
           <div
@@ -109,6 +109,7 @@ export default function ScrollCarousel3D({ products = [] }) {
           >
             {products.map(({ node }, i) => {
               const img = node.images?.edges?.[0]?.node;
+              const hoverImg = node.images?.edges?.[1]?.node;
               const price = node.priceRange?.minVariantPrice?.amount;
               const material = node.productType || node.tags?.[0] || "Fine Jewelry";
 
@@ -119,18 +120,31 @@ export default function ScrollCarousel3D({ products = [] }) {
                   style={{ width: `${CARD_W}px`, flexShrink: 0, willChange: "transform, opacity" }}
                 >
                   <Link href={`/produkt/${node.handle}`} className="block group">
-                    <div className="relative overflow-hidden bg-stone-50 mb-3"
+                    <div className="relative overflow-hidden bg-white mb-3"
                       style={{ height: `${CARD_W}px` }}
                     >
                       {img ? (
-                        <Image
-                          src={img.url}
-                          alt={img.altText || node.title}
-                          fill
-                          sizes="260px"
-                          className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.04]"
-                          priority={i < 4}
-                        />
+                        <>
+                          <Image
+                            src={img.url}
+                            alt={img.altText || node.title}
+                            fill
+                            sizes="260px"
+                            className={`object-cover transition-all duration-700 ease-out ${
+                              hoverImg ? "group-hover:opacity-0" : "group-hover:scale-[1.04]"
+                            }`}
+                            priority={i < 4}
+                          />
+                          {hoverImg && (
+                            <Image
+                              src={hoverImg.url}
+                              alt={hoverImg.altText || node.title}
+                              fill
+                              sizes="260px"
+                              className="object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700 ease-out"
+                            />
+                          )}
+                        </>
                       ) : (
                         <div className="absolute inset-0 bg-stone-100 flex items-center justify-center text-stone-300 text-[9px] tracking-[0.3em] uppercase">
                           Kein Bild
@@ -138,13 +152,13 @@ export default function ScrollCarousel3D({ products = [] }) {
                       )}
                     </div>
                     <div className="text-center px-2">
-                      <h3 className="font-serif font-semibold text-stone-900 mb-1.5 leading-snug line-clamp-2 text-[14px]">
+                      <h3 className="font-serif font-bold text-stone-900 mb-1.5 leading-snug line-clamp-2 text-[15px]">
                         {node.title}
                       </h3>
-                      <p className="text-[9px] tracking-[0.35em] uppercase font-normal text-stone-400 mb-1.5">
+                      <p className="text-[10px] tracking-[0.35em] uppercase font-semibold text-stone-400 mb-1.5">
                         {material}
                       </p>
-                      <p className="text-[12px] font-normal text-stone-700 tracking-wide">
+                      <p className="text-[13px] font-semibold text-stone-700 tracking-wide">
                         {fmt(price)} €
                       </p>
                     </div>

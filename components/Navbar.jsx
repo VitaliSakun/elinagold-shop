@@ -39,9 +39,11 @@ export default function Navbar({ collections = [], overDark = false, scrolled = 
   let bgClass = "";
   if (!isHomepage) {
     bgClass = "bg-white/96 backdrop-blur-md shadow-[0_1px_0_rgba(0,0,0,0.07)]";
-  } else if (overDark && scrolled) {
-    bgClass = "bg-gradient-to-b from-black/30 to-transparent";
-  } else if (!overDark) {
+  } else if (!scrolled) {
+    bgClass = "bg-transparent";
+  } else if (overDark) {
+    bgClass = "bg-black/20 backdrop-blur-[2px] shadow-sm"; // Slightly darker background for readability over dark sections
+  } else {
     bgClass = "bg-white/96 backdrop-blur-md shadow-[0_1px_0_rgba(0,0,0,0.07)]";
   }
 
@@ -57,7 +59,7 @@ export default function Navbar({ collections = [], overDark = false, scrolled = 
       <nav className={`w-full flex items-center justify-between px-4 md:px-10 py-3 md:py-5 transition-all duration-500 ${textColor} ${bgClass}`}>
 
         {/* Desktop Links */}
-        <ul className="hidden lg:flex gap-5 xl:gap-8 text-[10px] xl:text-[11px] tracking-[0.22em] font-medium items-center flex-1 overflow-hidden">
+        <ul className="hidden lg:flex gap-4 xl:gap-6 text-[10px] xl:text-[11px] tracking-[0.2em] font-bold items-center flex-1">
           {navLinks.slice(0, 5).map((link) => (
             <li key={link.href} className="whitespace-nowrap">
               <Link
@@ -94,7 +96,7 @@ export default function Navbar({ collections = [], overDark = false, scrolled = 
           {/* Desktop Suche */}
           <button onClick={() => setSearchOpen(true)} className="hidden xl:flex items-center gap-2 hover:opacity-50 transition-opacity" aria-label="Suche">
             <Search size={17} strokeWidth={1.2} />
-            <span className="text-[10px] tracking-[0.2em] font-medium uppercase">Suchen</span>
+            <span className="text-[10px] tracking-[0.2em] font-bold uppercase">Suchen</span>
           </button>
 
           <button aria-label="Wunschliste" className="hidden md:block hover:opacity-50 transition-opacity">
@@ -149,7 +151,7 @@ export default function Navbar({ collections = [], overDark = false, scrolled = 
                   key={link.href}
                   href={link.href}
                   onClick={() => setMenuOpen(false)}
-                  className={`text-lg font-medium tracking-[0.25em] uppercase text-black active:opacity-40 transition-opacity ${
+                  className={`text-lg font-bold tracking-[0.25em] uppercase text-black active:opacity-40 transition-opacity ${
                     pathname.startsWith(link.href) ? "opacity-40" : ""
                   }`}
                 >
