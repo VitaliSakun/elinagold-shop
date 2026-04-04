@@ -2,32 +2,31 @@ import Link from "next/link";
 
 const Footer = () => (
   <footer className="w-full bg-[#f9f8f4] text-black py-12 md:py-20 px-5 md:px-12 font-sans border-t border-stone-200">
-    <div className="max-w-[1800px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-8 md:gap-12 text-[10px] md:text-[11px] tracking-wider leading-loose">
+    <div className="max-w-[1800px] mx-auto grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 md:gap-12 text-[10px] md:text-[11px] tracking-wider leading-loose">
       <div className="col-span-2 md:col-span-1 flex flex-col gap-6 md:gap-10">
         <div>
           <h4 className="font-bold uppercase mb-2">
-            Sprache: <span className="font-normal underline cursor-pointer">DE</span>
+            Sprache: <span className="font-medium underline cursor-pointer">DE</span>
           </h4>
         </div>
         <div>
           <h4 className="font-bold uppercase mb-2">
-            Land: <span className="font-normal underline cursor-pointer">Deutschland (EUR €)</span>
+            Land: <span className="font-medium underline cursor-pointer">Deutschland (EUR €)</span>
           </h4>
         </div>
       </div>
 
       <div>
         <h4 className="font-bold uppercase mb-4 md:mb-6">Kontakt</h4>
-        <ul className="space-y-2.5 md:space-y-3 font-normal uppercase">
+        <ul className="space-y-2.5 md:space-y-3 font-medium uppercase">
           <li className="cursor-pointer active:opacity-40 hover:opacity-50 transition-opacity">Email</li>
           <li className="cursor-pointer active:opacity-40 hover:opacity-50 transition-opacity">Whatsapp</li>
-          <li className="cursor-pointer active:opacity-40 hover:opacity-50 transition-opacity">Live-chat</li>
         </ul>
       </div>
 
       <div>
         <h4 className="font-bold uppercase mb-4 md:mb-6">Information</h4>
-        <ul className="space-y-2.5 md:space-y-3 font-normal uppercase">
+        <ul className="space-y-2.5 md:space-y-3 font-medium uppercase">
           <li className="cursor-pointer active:opacity-40 hover:opacity-50 transition-opacity">FAQ&apos;s</li>
           <li className="cursor-pointer active:opacity-40 hover:opacity-50 transition-opacity">Größentabelle</li>
           <li className="cursor-pointer active:opacity-40 hover:opacity-50 transition-opacity">Versand</li>
@@ -38,21 +37,10 @@ const Footer = () => (
       </div>
 
       <div>
-        <h4 className="font-bold uppercase mb-4 md:mb-6">Über uns</h4>
-        <ul className="space-y-2.5 md:space-y-3 font-normal uppercase">
-          <li className="cursor-pointer active:opacity-40 hover:opacity-50 transition-opacity">Die Marke</li>
-          <li className="cursor-pointer active:opacity-40 hover:opacity-50 transition-opacity">Nachhaltigkeit</li>
-          <li className="cursor-pointer active:opacity-40 hover:opacity-50 transition-opacity">Karrieren</li>
-        </ul>
-      </div>
-
-      <div>
         <h4 className="font-bold uppercase mb-4 md:mb-6">Folge uns</h4>
-        <ul className="space-y-2.5 md:space-y-3 font-normal uppercase">
+        <ul className="space-y-2.5 md:space-y-3 font-medium uppercase">
           <li className="cursor-pointer active:opacity-40 hover:opacity-50 transition-opacity">Instagram</li>
           <li className="cursor-pointer active:opacity-40 hover:opacity-50 transition-opacity">Tiktok</li>
-          <li className="cursor-pointer active:opacity-40 hover:opacity-50 transition-opacity">Pinterest</li>
-          <li className="cursor-pointer active:opacity-40 hover:opacity-50 transition-opacity">YouTube</li>
         </ul>
       </div>
     </div>

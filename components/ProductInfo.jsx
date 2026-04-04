@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useCallback } from "react";
-import { ShoppingBag, Heart, ChevronDown, Shield, RefreshCw, Truck, Award, Gem } from "lucide-react";
+import { ShoppingBag, Heart, ChevronDown, Shield, Gem } from "lucide-react";
 import { useCart } from "@/context/CartContext";
 
 // ─── Helpers ──────────────────────────────────────────────────────────────
@@ -41,7 +41,7 @@ const CARE_TEXT =
   "Bewahren Sie Ihren Schmuck in der beigelegten Elina Gold Tasche oder Box auf. Vermeiden Sie Kontakt mit Parfum, Sonnencreme und chemischen Substanzen. Reinigen Sie ihn sanft mit einem weichen, fusselfreien Tuch. Nehmen Sie Ihren Schmuck vor dem Schlafen, Baden und Sport ab.";
 
 const SHIPPING_TEXT =
-  "Kostenloser Standardversand (2–4 Werktage) ab 60 €, darunter 4,90 €. Express-Lieferung (1–2 Werktage) 12,90 €. Alle Bestellungen werden in einer eleganten Elina Gold Geschenkverpackung versandt. Rückgabe innerhalb von 30 Tagen – kostenlos und unkompliziert.";
+  "Kostenloser Standardversand (2–4 Werktage) ab 99 €, darunter 4,90 €. Alle Bestellungen werden in einer eleganten Elina Gold Geschenkverpackung versandt.";
 
 const PAYMENT_METHODS = [
   "VISA", "MASTERCARD", "PAYPAL", "APPLE PAY", "GOOGLE PAY", "KLARNA",
@@ -58,7 +58,7 @@ function Accordion({ sections }) {
             onClick={() => setOpen(open === s.id ? null : s.id)}
             className="w-full flex items-center justify-between py-5 text-left group"
           >
-            <span className="text-[9px] tracking-[0.4em] uppercase font-normal text-stone-500 group-hover:text-black transition-colors duration-300">
+            <span className="text-[15px] tracking-[0.4em] uppercase font-medium text-stone-500 group-hover:text-black transition-colors duration-300">
               {s.title}
             </span>
             <ChevronDown
@@ -78,7 +78,7 @@ function Accordion({ sections }) {
             <div className="pb-6">
               {s.isPayment ? (
                 <div>
-                  <p className="text-[11px] font-normal text-stone-400 leading-6 mb-4">
+                  <p className="text-[14px] font-medium text-stone-400 leading-6 mb-4">
                     Wir akzeptieren alle gängigen Zahlungsmethoden für ein sicheres
                     und bequemes Einkaufserlebnis.
                   </p>
@@ -86,7 +86,7 @@ function Accordion({ sections }) {
                     {PAYMENT_METHODS.map((method) => (
                       <span
                         key={method}
-                        className="border border-stone-200 px-3 py-1.5 text-[8px] tracking-[0.25em] font-normal text-stone-400 uppercase"
+                        className="border border-stone-200 px-3 py-1.5 text-[14px] tracking-[0.25em] font-medium text-stone-400 uppercase"
                       >
                         {method}
                       </span>
@@ -97,17 +97,17 @@ function Accordion({ sections }) {
                 <div className="space-y-3">
                   {s.rows.map((row) => (
                     <div key={row.label} className="flex gap-4">
-                      <span className="text-[9px] tracking-[0.25em] uppercase text-stone-400 w-24 flex-shrink-0">
+                      <span className="text-[15px] tracking-[0.25em] uppercase text-stone-400 w-24 flex-shrink-0">
                         {row.label}
                       </span>
-                      <span className="text-[11px] font-normal text-stone-600 flex-1">
+                      <span className="text-[14px] font-medium text-stone-600 flex-1">
                         {row.value}
                       </span>
                     </div>
                   ))}
                 </div>
               ) : (
-                <p className="text-[11.5px] font-normal leading-7 text-stone-500">{s.content}</p>
+                <p className="text-[14px] font-medium leading-7 text-stone-500">{s.content}</p>
               )}
             </div>
           </div>
@@ -174,29 +174,29 @@ export default function ProductInfo({ product }) {
       {product.collections?.edges?.[0] && (
         <div className="flex items-center gap-3 mb-6">
           <div className="w-6 h-px bg-stone-300" />
-          <p className="text-[8px] tracking-[0.5em] uppercase text-stone-400 font-normal">
+          <p className="text-[14px] tracking-[0.5em] uppercase text-stone-400 font-medium">
             {product.collections.edges[0].node.title}
           </p>
         </div>
       )}
 
       {/* Produktname */}
-      <h1 className="text-[24px] md:text-[30px] font-normal tracking-[0.2em] uppercase text-stone-900 leading-[1.3] mb-6">
+      <h1 className="text-[24px] md:text-[30px] font-medium tracking-[0.2em] uppercase text-stone-900 leading-[1.3] mb-6">
         {product.title}
       </h1>
 
       {/* Preis */}
       <div className="flex items-baseline gap-4 mb-5">
-        <span className="text-[22px] font-normal tracking-[0.1em] text-stone-900">
+        <span className="text-[22px] font-medium tracking-[0.1em] text-stone-900">
           {fmt(price)}
         </span>
         {hasDiscount && (
-          <span className="text-[13px] font-normal text-stone-400 line-through tracking-wide">
+          <span className="text-[15px] font-medium text-stone-400 line-through tracking-wide">
             {fmt(comparePrice)}
           </span>
         )}
         {hasDiscount && (
-          <span className="text-[8px] tracking-[0.3em] uppercase bg-stone-900 text-white px-2.5 py-1 font-normal">
+          <span className="text-[14px] tracking-[0.3em] uppercase bg-stone-900 text-white px-2.5 py-1 font-medium">
             Sale
           </span>
         )}
@@ -207,7 +207,7 @@ export default function ProductInfo({ product }) {
         <span
           className={`w-1.5 h-1.5 rounded-full ${isAvailable ? "bg-emerald-500" : "bg-red-400"}`}
         />
-        <span className="text-[8px] tracking-[0.35em] uppercase text-stone-400">
+        <span className="text-[14px] tracking-[0.35em] uppercase text-stone-400">
           {isAvailable ? "Auf Lager — Versandfertig" : "Derzeit nicht verfügbar"}
         </span>
       </div>
@@ -220,10 +220,10 @@ export default function ProductInfo({ product }) {
         <div className="mb-8 space-y-6">
           {product.options.map((opt) => (
             <div key={opt.name}>
-              <p className="text-[8px] tracking-[0.45em] uppercase text-stone-400 mb-3 font-normal">
+              <p className="text-[14px] tracking-[0.45em] uppercase text-stone-400 mb-3 font-medium">
                 {opt.name}
                 {selectedOptions[opt.name] && (
-                  <span className="ml-3 text-stone-700 font-normal tracking-[0.15em]">{selectedOptions[opt.name]}</span>
+                  <span className="ml-3 text-stone-700 font-medium tracking-[0.15em]">{selectedOptions[opt.name]}</span>
                 )}
               </p>
               <div className="flex flex-wrap gap-2">
@@ -241,7 +241,7 @@ export default function ProductInfo({ product }) {
                         setSelectedOptions((prev) => ({ ...prev, [opt.name]: val }))
                       }
                       disabled={!available}
-                      className={`min-w-[42px] px-4 py-2.5 text-[9px] tracking-[0.2em] border transition-all duration-300
+                      className={`min-w-[42px] px-4 py-2.5 text-[15px] tracking-[0.2em] border transition-all duration-300
                         ${!available
                           ? "border-stone-200 text-stone-300 cursor-not-allowed line-through"
                           : selectedOptions[opt.name] === val
@@ -261,7 +261,7 @@ export default function ProductInfo({ product }) {
 
       {/* Menge */}
       <div className="mb-8">
-        <p className="text-[8px] tracking-[0.45em] uppercase text-stone-400 mb-3 font-normal">Anzahl</p>
+        <p className="text-[14px] tracking-[0.45em] uppercase text-stone-400 mb-3 font-medium">Anzahl</p>
         <div className="inline-flex items-center border border-stone-200">
           <button
             onClick={() => setQty((q) => Math.max(1, q - 1))}
@@ -269,7 +269,7 @@ export default function ProductInfo({ product }) {
           >
             −
           </button>
-          <span className="w-11 h-11 flex items-center justify-center border-x border-stone-200 text-[12px] font-normal text-stone-800">
+          <span className="w-11 h-11 flex items-center justify-center border-x border-stone-200 text-[15px] font-medium text-stone-800">
             {qty}
           </span>
           <button
@@ -286,7 +286,7 @@ export default function ProductInfo({ product }) {
         <button
           onClick={handleAddToCart}
           disabled={loading || !isAvailable}
-          className={`w-full flex items-center justify-center gap-3 py-4 text-[10px] tracking-[0.5em] uppercase transition-all duration-400 font-normal
+          className={`w-full flex items-center justify-center gap-3 py-4 text-[15px] tracking-[0.5em] uppercase transition-all duration-400 font-medium
             ${added
               ? "bg-emerald-800 text-white"
               : isAvailable
@@ -302,32 +302,21 @@ export default function ProductInfo({ product }) {
           {loading ? "Wird hinzugefügt…" : added ? "Hinzugefügt" : "In den Warenkorb"}
         </button>
 
-        <button className="w-full flex items-center justify-center gap-2.5 py-3.5 border border-stone-200 text-[10px] tracking-[0.4em] uppercase text-stone-500 hover:border-stone-400 hover:text-stone-800 transition-all duration-300 font-normal">
+        <button className="w-full flex items-center justify-center gap-2.5 py-3.5 border border-stone-200 text-[15px] tracking-[0.4em] uppercase text-stone-500 hover:border-stone-400 hover:text-stone-800 transition-all duration-300 font-medium">
           <Heart size={13} strokeWidth={1.2} />
           Merken
         </button>
       </div>
 
-      {/* Trust Badges — edler gestaltet */}
-      <div className="grid grid-cols-3 gap-0 mb-10">
-        {[
-          { icon: Shield, label: "Sichere Zahlung", sub: "SSL-verschlüsselt" },
-          { icon: Truck, label: "Gratis Versand", sub: "Ab 60 € Bestellwert" },
-          { icon: RefreshCw, label: "30 Tage", sub: "Kostenlose Rückgabe" },
-        ].map(({ icon: Icon, label, sub }, idx) => (
-          <div
-            key={label}
-            className={`flex flex-col items-center gap-2 py-5 ${
-              idx < 2 ? "border-r border-stone-200/60" : ""
-            }`}
-          >
-            <Icon size={16} strokeWidth={1} className="text-stone-400" />
-            <div className="text-center">
-              <p className="text-[8px] tracking-[0.25em] uppercase text-stone-600 font-normal">{label}</p>
-              <p className="text-[7px] tracking-[0.15em] uppercase text-stone-400 mt-0.5">{sub}</p>
-            </div>
+      {/* Trust Badge */}
+      <div className="flex justify-center mb-10">
+        <div className="flex flex-col items-center gap-2 py-5">
+          <Shield size={16} strokeWidth={1} className="text-stone-400" />
+          <div className="text-center">
+            <p className="text-[14px] tracking-[0.25em] uppercase text-stone-600 font-medium">Sichere Zahlung</p>
+            <p className="text-[15px] tracking-[0.15em] uppercase text-stone-400 mt-0.5">SSL-verschlüsselt</p>
           </div>
-        ))}
+        </div>
       </div>
 
       {/* Accordion */}
@@ -338,8 +327,8 @@ export default function ProductInfo({ product }) {
         <div className="mt-10 pt-6 border-t border-stone-200/60 flex items-center gap-3">
           <Gem size={14} strokeWidth={1} className="text-stone-400" />
           <div>
-            <p className="text-[8px] tracking-[0.4em] uppercase text-stone-400 font-normal">Handgefertigt von</p>
-            <p className="text-[10px] tracking-[0.2em] uppercase text-stone-700 font-normal mt-0.5">{product.vendor}</p>
+            <p className="text-[14px] tracking-[0.4em] uppercase text-stone-400 font-medium">Handgefertigt von</p>
+            <p className="text-[15px] tracking-[0.2em] uppercase text-stone-700 font-medium mt-0.5">{product.vendor}</p>
           </div>
         </div>
       )}
