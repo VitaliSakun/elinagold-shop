@@ -71,7 +71,7 @@ export default function ScrollVideoHero() {
             zIndex: 1,
           }}
         >
-          <source src="/videos/cord_hero.mp4" type="video/mp4" />
+          <source src="/videos/hero-scroll.mp4" type="video/mp4" />
         </video>
 
         {/* Weicher weißer Übergang an den Rändern für nahtlosen Look */}
@@ -92,19 +92,19 @@ export default function ScrollVideoHero() {
             transition: "opacity 0.15s ease-out",
           }}
         >
-          <p className="text-[8px] md:text-[9px] tracking-[0.7em] uppercase mb-4 md:mb-5 text-stone-400">
+          <p className="text-[14px] md:text-[15px] tracking-[0.7em] uppercase mb-4 md:mb-5 text-stone-400">
             Fine Jewelry
           </p>
-          <h1 className="text-4xl md:text-8xl font-normal tracking-[0.2em] md:tracking-[0.25em] uppercase mb-2 md:mb-3 text-stone-900">
+          <h1 className="text-4xl md:text-8xl font-medium tracking-[0.2em] md:tracking-[0.25em] uppercase mb-2 md:mb-3 text-stone-900">
             <span style={{ color: "#5c1325" }}>Elina</span>
             {" Gold"}
           </h1>
-          <p className="text-[9px] md:text-[10px] tracking-[0.35em] md:tracking-[0.4em] uppercase mb-10 md:mb-12 text-stone-400 font-normal">
+          <p className="text-[15px] md:text-[15px] tracking-[0.35em] md:tracking-[0.4em] uppercase mb-10 md:mb-12 text-stone-400 font-medium">
             Schmuck für besondere Momente
           </p>
           <Link
             href="/kollektion"
-            className="border border-stone-800 px-10 md:px-14 py-3.5 md:py-4 text-[8px] md:text-[9px] tracking-[0.5em] uppercase transition-all duration-500 hover:bg-stone-900 hover:text-white min-h-11 md:min-h-12 inline-flex items-center text-stone-800"
+            className="border border-stone-800 px-10 md:px-14 py-3.5 md:py-4 text-[14px] md:text-[15px] tracking-[0.5em] uppercase transition-all duration-500 hover:bg-stone-900 hover:text-white min-h-11 md:min-h-12 inline-flex items-center text-stone-800"
           >
             Kollektion entdecken
           </Link>
@@ -119,7 +119,7 @@ export default function ScrollVideoHero() {
             transition: "opacity 0.15s ease-out",
           }}
         >
-          <span className="text-[7px] tracking-[0.5em] uppercase">Scroll</span>
+          <span className="text-[15px] tracking-[0.5em] uppercase">Scroll</span>
           <div className="w-px h-12 bg-stone-300 scroll-pulse" />
         </div>
 

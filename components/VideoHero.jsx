@@ -5,7 +5,7 @@ import { useState, useRef, useEffect } from "react";
 // ─── Tausche src gegen deinen Video-Pfad aus ───────────────────────────────
 // Lege die Videodatei z. B. unter /public/videos/hero.mp4 ab
 // und setze src="/videos/hero.mp4" oder eine externe URL.
-const VIDEO_SRC = "/videos/hero.mp4";
+const VIDEO_SRC = "/videos/hero-scroll.mp4";
 // ───────────────────────────────────────────────────────────────────────────
 
 export default function VideoHero() {
