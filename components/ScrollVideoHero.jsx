@@ -92,9 +92,6 @@ export default function ScrollVideoHero() {
             transition: "opacity 0.15s ease-out",
           }}
         >
-          <p className="text-[14px] md:text-[15px] tracking-[0.7em] uppercase mb-4 md:mb-5 text-stone-400">
-            Fine Jewelry
-          </p>
           <h1 className="text-4xl md:text-8xl font-medium tracking-[0.2em] md:tracking-[0.25em] uppercase mb-2 md:mb-3 text-stone-900">
             <span style={{ color: "#5c1325" }}>Elina</span>
             {" Gold"}
@@ -119,7 +116,6 @@ export default function ScrollVideoHero() {
             transition: "opacity 0.15s ease-out",
           }}
         >
-          <p className="text-[10px] tracking-[0.5em] uppercase text-stone-400 mb-1">Fine Jewelry</p>
           <h2 className="text-[18px] font-medium tracking-[0.2em] uppercase text-stone-900">
             <span style={{ color: "#5c1325" }}>Elina</span>{" Gold"}
           </h2>

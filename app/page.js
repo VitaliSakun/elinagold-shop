@@ -5,6 +5,7 @@ import ScrollVideoHero from "@/components/ScrollVideoHero";
 import CraftSection from "@/components/CraftSection";
 import ScrollCarousel3D from "@/components/ScrollCarousel3D";
 import Newsletter from "@/components/Newsletter";
+import FAQ from "@/components/FAQ";
 import AnimateIn from "@/components/AnimateIn";
 
 export default async function Home() {
@@ -133,7 +134,10 @@ export default async function Home() {
           <Newsletter />
         </AnimateIn>
 
-
+        {/* ══════════════════════════════════════════
+            6. FAQ
+        ══════════════════════════════════════════ */}
+        <FAQ />
 
       </main>
     </div>

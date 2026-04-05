@@ -39,8 +39,8 @@ const Footer = () => (
       <div>
         <h4 className="font-bold uppercase mb-4 md:mb-6">Folge uns</h4>
         <ul className="space-y-2.5 md:space-y-3 font-medium uppercase">
-          <li className="cursor-pointer active:opacity-40 hover:opacity-50 transition-opacity">Instagram</li>
-          <li className="cursor-pointer active:opacity-40 hover:opacity-50 transition-opacity">Tiktok</li>
+          <li className="active:opacity-40 hover:opacity-50 transition-opacity"><a href="https://www.instagram.com/elinagold.de/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+          <li className="active:opacity-40 hover:opacity-50 transition-opacity"><a href="https://www.tiktok.com/@elinagold.de" target="_blank" rel="noopener noreferrer">Tiktok</a></li>
         </ul>
       </div>
     </div>
