@@ -41,7 +41,7 @@ const CARE_TEXT =
   "Bewahren Sie Ihren Schmuck in der beigelegten Elina Gold Tasche oder Box auf. Vermeiden Sie Kontakt mit Parfum, Sonnencreme und chemischen Substanzen. Reinigen Sie ihn sanft mit einem weichen, fusselfreien Tuch. Nehmen Sie Ihren Schmuck vor dem Schlafen, Baden und Sport ab.";
 
 const SHIPPING_TEXT =
-  "Kostenloser Standardversand (2–4 Werktage) ab 99 €, darunter 4,90 €. Alle Bestellungen werden in einer eleganten Elina Gold Geschenkverpackung versandt.";
+  "Kostenloser Standardversand (2–4 Werktage) ab 99 €, darunter 4,90 €. Alle Bestellungen werden in einer eleganten Elina Gold Geschenkverpackung versandt. Bei Rückgaben trägt der Käufer die Versandkosten der Rücksendung.";
 
 const PAYMENT_ICONS = [
   { name: "Visa", icon: (

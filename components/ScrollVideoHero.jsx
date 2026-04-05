@@ -110,6 +110,21 @@ export default function ScrollVideoHero() {
           </Link>
         </div>
 
+        {/* Mobile Branding — sofort sichtbar, blendet beim Scrollen aus */}
+        <div
+          className="absolute top-6 left-0 right-0 flex md:hidden flex-col items-center pointer-events-none"
+          style={{
+            zIndex: 3,
+            opacity: 1 - textOpacity,
+            transition: "opacity 0.15s ease-out",
+          }}
+        >
+          <p className="text-[10px] tracking-[0.5em] uppercase text-stone-400 mb-1">Fine Jewelry</p>
+          <h2 className="text-[18px] font-medium tracking-[0.2em] uppercase text-stone-900">
+            <span style={{ color: "#5c1325" }}>Elina</span>{" Gold"}
+          </h2>
+        </div>
+
         {/* Scroll-Indikator */}
         <div
           className="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-2 text-stone-400 select-none pointer-events-none"
